@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pieza Gráfica - Reseña Crítica</title>
+    <style>
+        /* LA FUENTE Y EL ESPACIO */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@300;400;600&display=swap');
+        
+        :root {
+            /* EL COLOR Y LA TEXTURA */
+            --bg-color: #f4f4f9;
+            --primary-dark: #1a1a2e;
+            --accent-red: #e94560;
+            --accent-blue: #0f3460;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --texture: radial-gradient(circle at center, #2a2a4a 0%, #1a1a2e 100%);
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* LA LÍNEA Y LA FORMA */
+        .infographic-container {
+            max-width: 1100px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 4px solid var(--primary-dark);
+        }
+
+        .header {
+            background: var(--texture);
+            color: var(--text-light);
+            text-align: center;
+            padding: 45px 20px 35px 20px;
+            border-bottom: 8px solid var(--accent-red);
+            position: relative;
+        }
+
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            font-weight: 900;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header p.subtitle {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        /* Bloque Académico / Créditos */
+        .academic-info {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 0.9em;
+            text-align: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .academic-info strong {
+            color: var(--accent-red);
+        }
+
+        .team-list {
+            margin: 5px 0 0 0;
+            padding-left: 18px;
+        }
+
+        /* Estilo especial para resaltar a Juan Esteban */
+        .highlighted-author {
+            color: #ff4757;
+            font-weight: bold;
+            list-style-type: disc;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .card {
+            background: #fafafa;
+            border-left: 6px solid var(--accent-blue);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--accent-blue);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px dashed #ccc;
+            padding-bottom: 10px;
+        }
+
+        .icon {
+            font-size: 1.5em;
+        }
+
+        /* Estilos para las imágenes integradas */
+        .card-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 180px;
+            object-fit: contain;
+            display: block;
+            margin: 15px auto 0 auto;
+            border-radius: 6px;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .timeline li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .timeline li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-red);
+            border-radius: 50%;
+        }
+
+        .rubric-footer {
+            background: var(--primary-dark);
+            color: var(--text-light);
+            padding: 25px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .rubric-grid {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .rubric-item {
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="infographic-container">
+        <header class="header">
+            <h1>La Reseña Crítica</h1>
+            <p class="subtitle">🎬 Teoría, Estructura y Cronograma Académico 🎬</p>
+            
+            <div class="academic-info">
+                <div>
+                    <strong>📖 Campo De Aprendizaje Institucional (CAI):</strong> Lectura crítica y comunicación<br><br>
+                    <strong>👩‍🏫 Gestora del Conocimiento:</strong> Nancy Castro
+                </div>
+                <div>
+                    <strong>🚀 Creadores de Oportunidades:</strong>
+                    <ul class="team-list">
+                        <li class="highlighted-author">Juan Esteban Ortiz Loaiza</li>
+                        <li>Juan Pablo Ortega Gomez</li>
+                        <li>Stiven Alexander Ortega Prada</li>
+                        <li>Johan Francisco Jimenez Perea</li>
+                        <li>Brayan Alejandro Martinez Vanegas</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            
+            <div class="card" style="grid-column: 1 / -1; background: #fffcf4; border-left-color: #f39c12;">
+                <div>
+                    <h2 style="color: #d35400;"><span class="icon">🔍</span> ¿Qué es y para qué sirve?</h2>
+                    <p><strong>¿Qué es?</strong> Es un texto de carácter argumentativo y expositivo en el cual se examina, analiza y pondera una obra artística, literaria o científica (como un filme o un libro). No se limita a resumir, sino que exige adoptar una postura clara y defenderla mediante argumentos sólidos.</p>
+                    <p><strong>¿Para qué sirve?</strong> Su propósito principal es orientar al lector, ayudándole a decidir si vale la pena dedicar tiempo o recursos a la obra reseñada. Además, funciona como un valioso ejercicio académico para desarrollar el pensamiento crítico y la redacción.</p>
+                </div>
+                <img src="hombre_libro.png" alt="Análisis profundo" class="card-image" style="max-height: 140px;">
+            </div>
+            
+            <div class="card">
+                <div>
+                    <h2><span class="icon">🧠</span> Fundamentos de la Estructura</h2>
+                    <p><strong>Estructura Ideal:</strong></p>
+                    <ol>
+                        <li>Título original y Ficha técnica.</li>
+                        <li>Introducción y contexto.</li>
+                        <li>Síntesis (sin spoilers).</li>
+                        <li><strong>Comentario crítico (El núcleo).</strong></li>
+                        <li>Conclusiones y veredicto.</li>
+                    </ol>
+                </div>
+                <img src="mente_escritura.png" alt="Proceso de escritura" class="card-image">
+            </div>
+
+            <div class="card" style="border-left-color: var(--accent-red);">
+                <div>
+                    <h2 style="color: var(--accent-red);"><span class="icon">📅</span> Sesiones de Clase</h2>
+                    <ul class="timeline">
+                        <li><strong>Semana 7 (7 abr):</strong> Observación y análisis de la película <em>En la casa</em>. Lectura de la guía de UniAndes.</li>
+                        <li><strong>Semana 8 (14 abr):</strong> Explicación conceptual con la gestora del conocimiento (30 min) e inicio de escritura.</li>
+                        <li><strong>Semana 9 (21 abr):</strong> Sustentación de reseñas a manera de conversatorio grupal guiado.</li>
+                    </ul>
+                </div>
+                <img src="investigador.jpg" alt="Investigación y análisis" class="card-image">
+            </div>
+
+            <div class="card" style="grid-column: 1 / -1; background: #eef2f5; border-left: none; border-top: 6px solid var(--accent-blue);">
+                <div>
+                    <h2><span class="icon">📝</span> Requisitos del Documento Final</h2>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <p><strong>Normativa:</strong> APA 7ª Ed. | Portada | Máximo 15% IA (85% Inteligencia Humana).</p>
+                            <p><strong>Fase 1 (Análisis de Contexto):</strong></p>
+                            <ul>
+                                <li>Tema según el lenguaje cinematográfico.</li>
+                                <li>Relación Título - Contenido - Personajes.</li>
+                                <li>Conflicto principal del filme.</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <p><strong>Fase 2 (Escritura de la Reseña):</strong></p>
+                            <ul>
+                                <li>Relación trama-tema & Sinopsis (máx. media cuartilla).</li>
+                                <li>Análisis de un fragmento y sensaciones provocadas.</li>
+                                <li>Juicio valorativo y crítico <em>(Exactamente 5 renglones)</em>.</li>
+                                <li>Análisis técnico (color, sonido, montaje) <em>(Exactamente 5 renglones)</em>.</li>
+                                <li>Recomendación justificada del filme.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <img src="pluma_libro.png" alt="Icono de Redacción" class="card-image" style="max-height: 80px; margin-top: 25px;">
+            </div>
+        </div>
+
+        <footer class="rubric-footer">
+            <h3 style="margin: 0; font-family: 'Montserrat', sans-serif;">Criterios de Diseño Aplicados en esta Pieza</h3>
+            <div class="rubric-grid">
+                <div class="rubric-item">📐 <strong>Línea y Forma:</strong> Cuadrículas, bordes redondeados y divisiones limpias.</div>
+                <div class="rubric-item">🎨 <strong>Color y Textura:</strong> Contraste oscuro/claro con gradientes radiales en el encabezado.</div>
+                <div class="rubric-item">🔤 <strong>Fuente y Espacio:</strong> Jerarquía visual con 'Montserrat' y 'Open Sans', con márgenes amplios.</div>
+                <div class="rubric-item">🎬 <strong>Imágenes:</strong> Ilustraciones relacionadas a la lectura y la investigación crítica integradas al contenido.</div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
